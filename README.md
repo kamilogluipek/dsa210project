@@ -6,7 +6,7 @@ The aim of this project is to analyze the relationship between my social media t
 When the weather is rainy, cloudy and snowy my social media screen time increases. I am confident that when weather is subjectively bad and it's harder to go out and socialize I tend to spend more time on instagram.
 
 # Motivation
-I realized that my screen time is increasing significantly and I want to monitor and control my activity. I believe that my findings can help me to reduce my social media time and help me do something more productive instead by gaining awareness on my behaviour.
+I realized that my screen time is increasing significantly and I want to monitor and control my activity. I believe that my findings can help me to reduce my social media time and help me to do something more productive instead by gaining awareness on my behaviour.
 
 # Data source
 I'll gather the weather and my social media data (instagram) from compare them using charts and descriptive statistics. I believe I won't have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data won't be that personal. Including the weather data, I'll only focus on if it's raining, cloudy or snowy, not on moisture, pressure or rain/snow amount or alike parameters.
