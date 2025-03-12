@@ -1,4 +1,4 @@
-# dsa210project
+# DSA210project
 # Introduction
 The aim of this project is to analyze the relationship between my social media time and weather status between the dates 17/02/2025 and 17/04/2025.
 
