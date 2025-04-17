@@ -9,7 +9,7 @@ When the weather is rainy, cloudy and snowy my social media screen time increase
 I realized that my screen time is increasing significantly and I want to monitor and control my activity. I believe that my findings can help me to reduce my social media time and help me to do something more productive instead by gaining awareness on my behaviour.
 
 # Data source
-I'll gather the weather and my social media data (instagram) from compare them using charts and descriptive statistics. I believe I won't have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data won't be that personal. Including the weather data, I'll only focus on if it's raining, cloudy or snowy, not on moisture, pressure or rain/snow amount or alike parameters.
+I'll gather the weather and my social media data (instagram) to compare them using charts and descriptive statistics. I believe I won't have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data won't be that personal. Including the weather data, I'll only focus on if it's raining, cloudy or snowy, not on moisture, pressure or rain/snow amount or alike parameters.
 
 # Project Plan 
 1. Gather all the data needed.
@@ -17,4 +17,17 @@ I'll gather the weather and my social media data (instagram) from compare them u
 3. Provide graphs and descriptive statistics using pandas and matplotlib libraries.
 4. Test the hypothesis using p-test and analyzing the charts.
 5. Determine wheter the hypothesis is correct or not, if it's not try to explain why.
+
+# Collecting Data
+After I collected manually my daily Instagram screen time and corresponding weather conditions between 17.02.2025 and 17.04.2025, I conducted an exploratory data analysis to observe any patterns. 
+I grouped weather conditions into two categories:
+Bad weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
+Good weather: Sunny (S) 
+
+I put all of this data into an excel file for further analysis.
+
+
+
+
+
 
