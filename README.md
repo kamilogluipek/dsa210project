@@ -21,8 +21,8 @@ I'll gather the weather and my social media data (instagram) to compare them usi
 # Collecting Data
 After I collected manually my daily Instagram screen time and corresponding weather conditions between 17.02.2025 and 17.04.2025, I conducted an exploratory data analysis to observe any patterns. 
 I grouped weather conditions into two categories:
-Bad weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
-Good weather: Sunny (S) 
+- Bad weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
+- Good weather: Sunny (S) 
 
 I put all of this data into an excel file for further analysis.
 
