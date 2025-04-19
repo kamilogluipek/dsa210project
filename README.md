@@ -40,6 +40,13 @@ Using pandas and matplotlib, I calculated the average Instagram usage for both w
 - Null hypothesis (H₀): There is no significant difference in Instagram screen time between bad and good weather days.
 - Alternative hypothesis (H₁): Instagram screen time is significantly higher during bad weather days.
 
+I conducted an independent samples t-test to compare the means of the two groups. And the results are:
+- t-statistic: 4.52
+- p-value: 0.000031 = 3.1e-05
+
+The test returned a t-statistic of 4.52 and a p-value of 0.000031, which is far below the significance level of 0.05. Therefore, I reject the null hypothesis.
+This strongly supports my assumption that during bad weather (cloudy, rainy, foggy, or snowy), I tend to spend significantly more time on Instagram. 
+
 ## 4. Visualization
 
 I created a histogram to show the overall distribution of screen time and a boxplot to see how median screen time differ between good and bad weather conditions. I used bar chart to compare the average Instagram screen time on good vs. bad weather days. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
