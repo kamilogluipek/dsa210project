@@ -32,8 +32,8 @@ I grouped weather conditions into two categories:
 
 Using pandas and matplotlib, I calculated the average Instagram usage for both weather groups:
 
-- Bad Weather Days: ~… minutes
-- Good Weather Days: ~… minutes
+- Bad Weather Days: ~ 90.46 minutes
+- Good Weather Days: ~ 51.4 minutes
 
 ## 3. Hypothesis Testing
 
@@ -42,7 +42,7 @@ Using pandas and matplotlib, I calculated the average Instagram usage for both w
 
 ## 4. Visualization
 
-I used Bar Chart to compare the average Instagram screen time on good vs. bad weather days. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
+I created a histogram to show the overall distribution of screen time and a boxplot to see how median screen time differ between good and bad weather conditions. I used Bar Chart to compare the average Instagram screen time on good vs. bad weather days. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
 
 
 
