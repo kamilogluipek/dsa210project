@@ -18,13 +18,32 @@ I'll gather the weather and my social media data (instagram) to compare them usi
 4. Test the hypothesis using p-test and analyzing the charts.
 5. Determine wheter the hypothesis is correct or not, if it's not try to explain why.
 
-# Collecting Data
-After I collected manually my daily Instagram screen time and corresponding weather conditions between 17.02.2025 and 17.04.2025, I conducted an exploratory data analysis to observe any patterns. 
-I grouped weather conditions into two categories:
-- Bad weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
-- Good weather: Sunny (S) 
+# Data Analysis
 
-I put all of this data into an excel file for further analysis.
+## 1. Collecting Data 
+
+After I collected manually my daily Instagram screen time and corresponding weather conditions between 17/02/2025 and 17/04/2025, I cleaned and structured datasets daily. Then, I merged datasets by date and put all of this data into an excel file for further analysis.
+
+I grouped weather conditions into two categories:
+- Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
+- Good Weather: Sunny (S) 
+
+## 2. Exploratory Data Analysis (EDA)
+
+Using pandas and matplotlib, I calculated the average Instagram usage for both weather groups:
+
+- Bad Weather Days: ~… minutes
+- Good Weather Days: ~… minutes
+
+## 3. Hypothesis Testing
+
+- Null hypothesis (H₀): There is no significant difference in Instagram screen time between bad and good weather days.
+- Alternative hypothesis (H₁): Instagram screen time is significantly higher during bad weather days.
+
+## 4. Visualization
+
+I used Bar Chart to compare the average Instagram screen time on good vs. bad weather days. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
+
 
 
 
