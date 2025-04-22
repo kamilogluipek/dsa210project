@@ -3,13 +3,21 @@
 The aim of this project is to analyze the relationship between my social media time and weather status between the dates 17/02/2025 and 17/04/2025.
 
 # Hypothesis 
-When the weather is rainy, cloudy and snowy my social media screen time increases. I am confident that when weather is subjectively bad and it's harder to go out and socialize I tend to spend more time on instagram.
+When the weather is rainy, cloudy, foggy and snowy my social media screen time increases. I am confident that when weather is subjectively bad and it's harder to go out and socialize I tend to spend more time on instagram.
 
 # Motivation
 I realized that my screen time is increasing significantly and I want to monitor and control my activity. I believe that my findings can help me to reduce my social media time and help me to do something more productive instead by gaining awareness on my behaviour.
 
 # Data source
-I'll gather the weather and my social media data (instagram) to compare them using charts and descriptive statistics. I believe I won't have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data won't be that personal. Including the weather data, I'll only focus on if it's raining, cloudy, foggy, and snowy, not on moisture, pressure or rain/snow amount or alike parameters.
+I will manually collect my daily Instagram screen time data from the Screen Time section of my Apple device and historical weather data for Istanbul for each day from the Weather Underground website: https://www.wunderground.com/calendar/tr/istanbul/LTBA/date/2025-4 
+
+I believe I won't have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data won't be that personal.
+
+For analysis, I will group weather conditions into two categories:
+- Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
+- Good Weather: Sunny (S) 
+
+Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I plan to enrich the dataset by manually collecting average daily temperature and precipitation amount for each day and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
 
 # Project Plan 
 1. Gather all the data needed.
@@ -30,7 +38,7 @@ I grouped weather conditions into two categories:
 
 ## 2. Exploratory Data Analysis (EDA)
 
-Using pandas and matplotlib, I calculated the average Instagram usage for both weather groups:
+Using pandas and matplotlib libraries, I did several exploratory data analyses to understand the distribution and behavior of my Instagram screen time under different weather conditions. I created a histogram to visualize the distribution of daily screen time, which helped me to identify the typical usage range in the data. I used a boxplot to compare screen time between good and bad weather days. It clearly revealed differences in medians. Lastly, I created a bar chart to show the average Instagram screen time for both groups:
 
 - Bad Weather Days: ~ 90.46 minutes
 - Good Weather Days: ~ 51.4 minutes
