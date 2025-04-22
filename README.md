@@ -38,10 +38,24 @@ I grouped weather conditions into two categories:
 
 ## 2. Exploratory Data Analysis (EDA)
 
-Using pandas and matplotlib libraries, I did several exploratory data analyses to understand the distribution and behavior of my Instagram screen time under different weather conditions. I created a histogram to visualize the distribution of daily screen time, which helped me to identify the typical usage range in the data. I used a boxplot to compare screen time between good and bad weather days. It clearly revealed differences in medians. Lastly, I created a bar chart to show the average Instagram screen time for both groups:
+Using pandas and matplotlib libraries, I did several exploratory data analyses to understand the distribution and behavior of my Instagram screen time under different weather conditions. I created a histogram to visualize the distribution of daily screen time, which helped me to identify the typical usage range in the data. I used a boxplot to compare screen time between good and bad weather days. It clearly revealed differences in medians. Lastly, I created a bar chart to show the average Instagram screen time for both groups.
 
-- Bad Weather Days: ~ 90.46 minutes
-- Good Weather Days: ~ 51.4 minutes
+### 2.1 Histogram
+![Image](https://github.com/user-attachments/assets/bc455f64-7a07-4955-b119-bd34134e99b4)
+
+This histogram shows the distribution of daily Instagram screen time. Most values are between 30 and 100 minutes.
+
+### 2.2 Boxplot
+![Image](https://github.com/user-attachments/assets/4ba29557-5903-4aac-bd98-ccb3f2c59afd)
+
+This boxplot compares screen time under good and bad weather conditions. The median usage is noticeably higher on bad weather days.
+
+### 2.3 Bar Chart 
+![Image](https://github.com/user-attachments/assets/00cccfc6-0edb-43c1-96f9-c8111466bf54)
+
+This bar chart shows the average Instagram screen time:
+- On bad weather days the average time is ~90.46 minutes.
+- On good weather days the average time is ~51.4 minutes.
 
 ## 3. Hypothesis Testing
 
