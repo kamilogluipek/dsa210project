@@ -11,7 +11,7 @@ I realized that my screen time is increasing significantly and I want to monitor
 # Data source
 I will manually collect my daily Instagram screen time data from the Screen Time section of my Apple device and historical weather data for Istanbul for each day from the Weather Underground website: https://www.wunderground.com/calendar/tr/istanbul/LTBA/date/2025-4 
 
-I believe I won't have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data won't be that personal.
+I believe I will not have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data will not be that personal.
 
 For analysis, I will group weather conditions into two categories:
 - Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
