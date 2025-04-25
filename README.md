@@ -46,7 +46,7 @@ Using pandas and matplotlib libraries, I did several exploratory data analyses t
 This histogram shows the distribution of daily Instagram screen time. Most values are between 30 and 100 minutes.
 
 ### 2.2 Boxplot
-![Image](https://github.com/user-attachments/assets/4ba29557-5903-4aac-bd98-ccb3f2c59afd)
+![Image](https://github.com/user-attachments/assets/6ab6a015-df52-4a9f-894b-53473de28d19)
 
 This boxplot compares screen time under good and bad weather conditions. The median usage is noticeably higher on bad weather days.
 
