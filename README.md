@@ -38,7 +38,7 @@ I grouped weather conditions into two categories:
 
 ## 2. Exploratory Data Analysis (EDA)
 
-Using pandas and matplotlib libraries, I did several exploratory data analyses to understand the distribution and behavior of my Instagram screen time under different weather conditions. I created a histogram to visualize the distribution of daily screen time, which helped me to identify the typical usage range in the data. I used a boxplot to compare screen time between good and bad weather days. It clearly revealed differences in medians. Lastly, I created a bar chart to show the average Instagram screen time for both groups.
+Using pandas and matplotlib libraries, I did several exploratory data analyses to understand the distribution and behavior of my Instagram screen time under different weather conditions. I created a histogram to visualize the distribution of daily screen time, which helped me to identify the typical usage range in the data. I used a boxplot to compare screen time between good and bad weather days. It clearly revealed differences in medians. Also, I created a bar chart to show the average Instagram screen time for both groups. I applied a simple linear regression to see how bad weather affects my Instagram screen time. The results showed a positive relationship that when the weather is bad, I tend to use Instagram more. In addition to the regression analysis, I also calculated the Pearson correlation coefficient between bad weather and my Instagram screen time.
 
 ### 2.1 Histogram
 ![Image](https://github.com/user-attachments/assets/bc455f64-7a07-4955-b119-bd34134e99b4)
@@ -62,6 +62,21 @@ This bar chart shows the average Instagram screen time:
 
 This scatterplot shows the relationship between weather conditions and Instagram screen time. Each point represents a day of usage, grouped by whether the weather was good (0) or bad (1). The regression line indicates a positive trend which means that my Instagram usage increases when the weather is bad.
 
+- Intercept (β₀): 51.40
+- Slope (β₁): 39.06
+
+On good weather days, I spend an average of 51.4 minutes on Instagram. In contrast, on bad weather days, my screen time increases by approximately 39 minutes.
+
+### 2.5 Correlation Analysis
+
+- Pearson Correlation Coefficient: 0.56
+→ This indicates a positive relationship between bad weather and my Instagram screen time.
+
+- P-Value: 0.0003
+→ Since the p-value is well below 0.05, the correlation is statistically significant.
+
+As bad weather increases, my Instagram usage tends to increase as well. This finding supports the main hypothesis from a correlational perspective.
+
 ## 3. Hypothesis Testing
 
 - Null hypothesis (H₀): There is no significant difference in Instagram screen time between bad and good weather days.
@@ -76,7 +91,7 @@ This strongly supports my assumption that during bad weather (cloudy, rainy, fog
 
 ## 4. Visualization
 
-I created a histogram to show the overall distribution of screen time and a boxplot to see how median screen time differ between good and bad weather conditions. I used bar chart to compare the average Instagram screen time on good vs. bad weather days. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
+I created a histogram to show the overall distribution of screen time and a boxplot to see how median screen time differ between good and bad weather conditions. I used bar chart to compare the average Instagram screen time on good vs. bad weather days. I also created a scatterplot with a regression line to visualize the relationship between bad weather and screen time. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
 
 
 
