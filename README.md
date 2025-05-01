@@ -57,6 +57,11 @@ This bar chart shows the average Instagram screen time:
 - On bad weather days the average time is ~90.46 minutes.
 - On good weather days the average time is ~51.4 minutes.
 
+### 2.4 Scatterplot with Regression Line
+![Image](https://github.com/user-attachments/assets/338f53bb-a800-4ef3-9a67-eb2eb579fbde)
+
+This scatterplot shows the relationship between weather conditions and Instagram screen time. Each point represents a day of usage, grouped by whether the weather was good (0) or bad (1). The regression line indicates a positive trend which means that my Instagram usage increases when the weather is bad.
+
 ## 3. Hypothesis Testing
 
 - Null hypothesis (H₀): There is no significant difference in Instagram screen time between bad and good weather days.
