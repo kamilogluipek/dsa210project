@@ -17,7 +17,7 @@ For analysis, I will group weather conditions into two categories:
 - Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
 - Good Weather: Sunny (S) 
 
-Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I plan to enrich the dataset by manually collecting average daily temperature and precipitation amount for each day and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
+Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I enriched the dataset by manually collecting average daily temperature and average daily humidity and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
 
 # Project Plan 
 1. Gather all the data needed.
