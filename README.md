@@ -9,7 +9,7 @@ When the weather is rainy, cloudy, foggy and snowy my social media screen time i
 I realized that my screen time is increasing significantly and I want to monitor and control my activity. I believe that my findings can help me to reduce my social media time and help me to do something more productive instead by gaining awareness on my behaviour.
 
 # Data source
-I will manually collect my daily Instagram screen time data from the Screen Time section of my Apple device and historical weather data for Istanbul for each day from the Weather Underground website: https://www.wunderground.com/calendar/tr/istanbul/LTBA/date/2025-4 
+I fetched daily Instagram screen time data from the Screen Time section of my Apple device and historical weather data for Istanbul for each day from the Weather Underground website: https://www.wunderground.com/calendar/tr/istanbul/LTBA/date/2025-4 
 
 I believe I will not have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data will not be that personal.
 
@@ -17,7 +17,7 @@ For analysis, I will group weather conditions into two categories:
 - Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
 - Good Weather: Sunny (S) 
 
-Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I enriched the dataset by manually collecting average daily temperature and average daily humidity and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
+Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I enriched the dataset by fetching average daily temperature and average daily humidity and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
 
 # Project Plan 
 1. Gather all the data needed.
@@ -30,7 +30,7 @@ Currently, the dataset includes a single weather related feature based on condit
 
 ## 1. Collecting Data 
 
-After I collected manually my daily Instagram screen time and corresponding weather conditions between 17/02/2025 and 17/04/2025, I cleaned and structured datasets daily. Then, I merged datasets by date and put all of this data into an excel file for further analysis.
+After I fetched daily Instagram screen time and corresponding weather conditions between 17/02/2025 and 17/04/2025, I cleaned and structured datasets daily. Then, I merged datasets by date and put all of this data into an excel file for further analysis.
 
 I grouped weather conditions into two categories:
 - Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
