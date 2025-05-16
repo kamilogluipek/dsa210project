@@ -114,7 +114,7 @@ This scatter plot compares the model’s predicted Instagram screen time with th
 ### 5.2 Confusion Matrix Interpretation
 ![Image](https://github.com/user-attachments/assets/ed0db43a-aa5a-4ba5-a978-2820240a4180)
 
-To further analyze prediction quality, I converted continuous Instagram screen time into categorical bins:
+I converted continuous Instagram screen time into categorical bins:
 
 0–30 min, 30–60 min, 60-90 min, 90-120 min, 120-150 min, 150–180 min 
 Using these bins, I generated a confusion matrix comparing actual vs predicted usage levels. The matrix shows how well the model can classify days into screen time categories.
