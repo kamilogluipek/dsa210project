@@ -14,8 +14,8 @@ I fetched daily Instagram screen time data from the Screen Time section of my Ap
 I believe I will not have any problems with ethics and privacy issues since all weather data is publicly avaible and my own data will not be that personal.
 
 For analysis, I will group weather conditions into two categories:
-- Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
-- Good Weather: Sunny (S) 
+- Bad Weather: Rainy (1), Cloudy (2), Snowy (3), and Foggy (4)
+- Good Weather: Sunny (0) 
 
 Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I enriched the dataset by fetching average daily temperature and average daily humidity and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
 
