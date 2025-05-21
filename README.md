@@ -33,8 +33,8 @@ Currently, the dataset includes a single weather related feature based on condit
 After I fetched daily Instagram screen time and corresponding weather conditions between 17/02/2025 and 17/04/2025, I cleaned and structured datasets daily. Then, I merged datasets by date and put all of this data into an excel file for further analysis.
 
 I grouped weather conditions into two categories:
-- Bad Weather: Cloudy (C), Rainy (R), Foggy, and Snowy 
-- Good Weather: Sunny (S) 
+- Bad Weather: Rainy (1), Cloudy (2), Snowy (3), and Foggy (4)
+- Good Weather: Sunny (0) 
 
 ## 2. Exploratory Data Analysis (EDA)
 
