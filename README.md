@@ -64,7 +64,7 @@ This bar chart shows the average Instagram screen time:
 This scatterplot shows the relationship between average daily temperature and Instagram screen time. Each point represents a day's usage. A regression line has been fitted to visualize the trend more clearly. The negative slope of the line indicates that as temperature increases, Instagram screen time tends to decrease.
 
 - Intercept (β₀): 106.24
-- Slope (β₁): –3.31
+- Slope (β₁): -3.31
   
 This means that when the average daily temperature is 0°C, Instagram usage is expected to be around 106.2 minutes. For each 1°C increase in temperature, Instagram screen time decreases by approximately 3.31 minutes. These findings support the idea that colder weather may contribute to increased screen time indoors.
 
