@@ -147,7 +147,7 @@ This plot illustrates that SVR tends to underpredict high usage and overpredict 
 
 The SVR model’s confusion matrix shows most predictions are concentrated in the 30–60 and 60–90 bins, with a clear tendency to misclassify higher and lower actual usage as these middle bins.
 
-Among the three regression models tested (Random Forest, K-Nearest Neighbors, and Support Vector Regression) the Random Forest Regressor achieved the best performance with the lowest MAE (32.30 minutes), lowest RMSE (38.57 minutes), and the highest R² score (0.034). While overall predictive accuracy remained modest, Random Forest showed a stronger ability to capture patterns in the data, making it the most reliable model for estimating daily Instagram screen time based on weather conditions.
+Among these three regression models tested (Random Forest, K-Nearest Neighbors, and Support Vector Regression) the Random Forest Regressor achieved the best performance with the lowest MAE (32.30 minutes), lowest RMSE (38.57 minutes), and the highest R² score (0.034). While overall predictive accuracy remained modest, Random Forest showed a stronger ability to capture patterns in the data, making it the most reliable model for estimating daily Instagram screen time based on weather conditions.
 
 ## 6. Limitations and Future Work
 
