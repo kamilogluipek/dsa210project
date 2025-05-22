@@ -17,7 +17,7 @@ For analysis, I will group weather conditions into two categories:
 - Bad Weather: Rainy (1), Cloudy (2), Snowy (3), and Foggy (4)
 - Good Weather: Sunny (0) 
 
-Currently, the dataset includes a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this may not provide enough variance for machine learning applications. Therefore, I enriched the dataset by fetching average daily temperature and average daily humidity and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
+The dataset included a single weather related feature based on condition labels such as sunny, rainy, cloudy, foggy and snowy. However, this would not provide enough variance for machine learning applications. Therefore, I enriched the dataset by fetching average daily temperature and average daily humidity and integrating them into the dataset in the next step. These additional features will allow me to do better pattern recognition and predictive modeling in the future.
 
 # Project Plan 
 1. Gather all the data needed.
@@ -25,6 +25,7 @@ Currently, the dataset includes a single weather related feature based on condit
 3. Provide graphs and descriptive statistics using pandas and matplotlib libraries.
 4. Test the hypothesis using p-test and analyzing the charts.
 5. Determine wheter the hypothesis is correct or not, if it's not try to explain why.
+6. Train and evaluate machine learning models to predict Instagram screen time based on weather conditions.
 
 # Data Analysis
 
@@ -93,69 +94,87 @@ This strongly supports my assumption that during bad weather (cloudy, rainy, fog
 
 ## 4. Visualization
 
-I created a histogram to show the overall distribution of screen time and a boxplot to see how median screen time differ between good and bad weather conditions. I used bar chart to compare the average Instagram screen time on good vs. bad weather days. I also created a scatterplot with a regression line to visualize the relationship between bad weather and screen time. I might include additional visualizations such as time series plots or scatterplots for better illustrations.
+I created a histogram to show the overall distribution of screen time and a boxplot to see how median screen time differ between good and bad weather conditions. I used bar chart to compare the average Instagram screen time on good vs. bad weather days. I also created a scatterplot with a regression line to visualize the relationship between bad weather and screen time. 
+
+In addition to these statistical plots, I visualized the performance of machine learning models using actual vs. predicted scatter plots and confusion matrices. The scatter plots helped evaluate how closely each model’s predictions matched the real screen time values, where points closer to the diagonal red line indicate better predictions. The confusion matrices showed how accurately the models classified screen time into predefined usage bins, revealing tendencies like underprediction.
 
 ## 5. Machine Learning Prediction
 
-To explore predictive modeling, I used a Random Forest Regressor to estimate my daily Instagram screen time using:
-- Weather condition (Binary: Good vs. Bad)
-- Average daily temperature (°C)
-- Average daily humidity (%)
+I used cross-validation to evaluate three different regression models: Random Forest, K-Nearest Neighbors (KNN), and Support Vector Regression (SVR). Each model used weather condition (binary), average daily temperature, and average daily humidity as features to predict daily Instagram screen time.
 
-After splitting the dataset into training and test sets (80/20), I trained the model and evaluated it using RMSE and MAE.
-- RMSE (Root Mean Squared Error): ~40.2 minutes
-- MAE (Mean Absolute Error): ~33.1 minutes
+### 5.1 Random Forest Regressor
+* MAE (Mean Absolute Error): 32.30 minutes 
+* RMSE (Root Mean Squared Error): 38.57 minutes 
+* R²: 0.034
+  
+### Actual vs. Predicted Plot (RF)
+![Image](https://github.com/user-attachments/assets/69a99761-620d-425b-b6cf-7cedd67b2fae)
 
-### 5.1 Actual vs. Predicted Scatter Plot
-![Image](https://github.com/user-attachments/assets/a47c9a9f-b63c-464c-9bd3-620ef9880a8d)
+This scatter plot displays how closely the model’s predictions match the actual Instagram screen time values. Points closer to the diagonal red line show more accurate predictions.
 
-This scatter plot compares the model’s predicted Instagram screen time with the actual values from the test dataset. Each point represents a single day. The red dashed line indicates the ideal case where prediction equals reality. Points closer to the diagonal show more accurate predictions. Some variation from the line exists, but the model captures the overall trend well. It demonstrates the model's reasonable predictive power despite noise in human behavior data.
+### Confusion Matrix (RF)
+![Image](https://github.com/user-attachments/assets/00a31339-722d-4eff-8016-8404fb967fe6)
 
-### 5.2 Confusion Matrix Interpretation
-![Image](https://github.com/user-attachments/assets/ed0db43a-aa5a-4ba5-a978-2820240a4180)
+The confusion matrix below demonstrates how well the Random Forest model classifies daily screen time into pre-defined bins. Most predictions are close to the diagonal, indicating the model often predicts the correct or neighboring usage range.
 
-I converted continuous Instagram screen time into categorical bins:
+### 5.2 K-Nearest Neighbors (KNN) Regressor
+* MAE (Mean Absolute Error): 34.74 minutes 
+* RMSE (Root Mean Squared Error): 42.16 minutes 
+* R²: -0.155
+  
+### Actual vs. Predicted Plot (KNN) 
+![Image](https://github.com/user-attachments/assets/2b5dac33-a9be-4928-8a25-3da5aef5f3a7)
 
-0–30 min, 30–60 min, 60-90 min, 90-120 min, 120-150 min, 150–180 min 
-Using these bins, I generated a confusion matrix comparing actual vs predicted usage levels. The matrix shows how well the model can classify days into screen time categories.
-A strong diagonal in the matrix indicates the model predicts the correct range most of the time, even if it doesn’t hit the exact minute count.
+The plot shows predicted versus actual Instagram usage. While there is some scatter, most points are in the lower left, indicating the model generally predicts the trend but not exact values.
 
-To evaluate the model’s classification-like performance, I binned the continuous Instagram screen time predictions into six categories (e.g., 0–30, 30–60, 60-90, 90-120, 120-150, 150–180 minutes). Then I compared actual and predicted bins using a confusion matrix. In the matrix, each row represents the actual screen time bin, and each column represents the predicted bin. The values on the diagonal show correct predictions, when the model placed a day into the correct usage range. Most values clustered around the diagonal, indicating the model frequently predicts screen time in the correct or a neighboring bin. This result suggests that the regression model is not only good at predicting the general trend of screen time but also reasonably accurate at classifying days into approximate usage levels. Misclassifications were mostly between adjacent bins, which is acceptable given the continuous nature of the target variable.
+### Confusion Matrix (KNN)
+![Image](https://github.com/user-attachments/assets/cd36ade2-88ef-49b1-a467-c6f3a38f669f)
 
-These visualizations show that the Random Forest model performs reasonably well in both numeric and categorical interpretation of Instagram screen time, especially considering the limited feature set and human-driven variability. 
+The KNN model’s confusion matrix reveals that predictions are often in the correct or neighboring bins, although some misclassifications occur, especially in middle ranges.
 
-Among the three features, temperature showed a statistically significant negative correlation with screen time, and bad weather was also positively correlated. While humidity had a more subtle effect, it helped improve prediction accuracy when combined with the others.
+### 5.3 Support Vector Regression (SVR)
+* MAE (Mean Absolute Error): 36.09 minutes 
+* RMSE (Root Mean Squared Error): 42.53 minutes 
+* R²: -0.175
+  
+### Actual vs. Predicted Plot (SVR)
+![Image](https://github.com/user-attachments/assets/160c13a5-1dd1-4472-b6d3-1ac99cc1f9b5)
+
+This plot illustrates that SVR tends to underpredict high usage and overpredict low usage, with many points deviating from the ideal diagonal line.
+
+### Confusion Matrix (SVR)
+![Image](https://github.com/user-attachments/assets/721d8f02-598d-4be8-a8a5-f38317accddb)
+
+The SVR model’s confusion matrix shows most predictions are concentrated in the 30–60 and 60–90 bins, with a clear tendency to misclassify higher and lower actual usage as these middle bins.
+
+Among the three regression models tested (Random Forest, K-Nearest Neighbors, and Support Vector Regression) the Random Forest Regressor achieved the best performance with the lowest MAE (32.30 minutes), lowest RMSE (38.57 minutes), and the highest R² score (0.034). While overall predictive accuracy remained modest, Random Forest showed a stronger ability to capture patterns in the data, making it the most reliable model for estimating daily Instagram screen time based on weather conditions.
 
 ## 6. Limitations and Future Work
 
 ### 6.1 Limitations
 
-- Weather is reduced to a binary classification ("good" or "bad"), which may not reflect nuance. 
+- Weather is reduced to a binary classification (good or bad), which may not reflect nuance. 
 - Instagram usage is influenced by untracked personal factors like mood, sleep, or workload.
 - The dataset is small and manually collected, limiting scalability and generalizability.
 
 ### 6.2 Future Work
 
-More features can be added such as day of the week, sleep duration, or holidays, etc. Time-series forecasting or classification models can be used to understand trends better. The dataset can be expanded with more granular weather data such as precipitation amount or wind speed. 
+In this study, I have enriched the dataset by adding average daily temperature and average daily humidity to complement basic weather condition labels. These enhancements allowed for better pattern recognition and model performance. However, further improvements can still be made. Expanding the weather data with metrics like precipitation amount, wind speed, etc. may provide further insights into how environmental factors influence digital behavior. Additionally, collecting data over a longer time period or including data from multiple individuals would also increase the model’s generalizability. Finally, including personal behavioral variables such as mood and sleep quality could offer a better understanding of screen time dynamics in future work.
 
 ## 7. Findings
 
-This section summarizes the key findings obtained through both statistical analysis and machine learning methods. The aim was to determine whether there is a meaningful relationship between daily Instagram screen time and weather conditions. The following insights were derived by combining exploratory data analysis, hypothesis testing, and predictive modeling:
+The key findings obtained through both statistical analysis and machine learning methods. The aim was to determine whether there is a meaningful relationship between daily Instagram screen time and weather conditions. The following insights were derived by combining exploratory data analysis, hypothesis testing, and predictive modeling:
 
 - Screen time is significantly higher on bad weather days. On average, Instagram usage was approximately 90.5 minutes during bad weather compared to 51.4 minutes on good weather days.
 - Statistical testing confirmed the difference is significant. A two-sample t-test returned a t-statistic of 4.52 and a p-value of 0.000031, allowing us to reject the null hypothesis and conclude that weather conditions do impact screen time.
-- Linear regression showed a strong negative relationship between temperature and Instagram usage. The regression model estimated an intercept of 106.2 minutes and a slope of -3.31 minutes.
-- Pearson correlation coefficient was 0.56, indicating a moderate-to-strong positive relationship between bad weather and Instagram usage.
-- Machine learning predictions using Random Forest were reasonably accurate, with an RMSE of ~40.2 minutes and MAE of ~33.1 minutes.
-- Binning screen time into categories showed the model often classified days into the correct or neighboring usage range, confirming its practical predictive ability even if precise minute predictions varied.
+- Regression analysis revealed a negative relationship between temperature and Instagram usage. The regression model estimated an intercept of 106.2 minutes and a slope of -3.31 minutes.
+- Among the machine learning models, Random Forest achieved the best performance with an RMSE of 38.57 minutes and MAE of 32.30 minutes, but all models struggled to capture the full complexity of human behavior, as indicated by negative R² values.
+- Confusion matrix results show that all models tend to predict the general screen time range correctly but struggle with precise classification. Most misclassifications occur between neighboring bins, which is reasonable for continuous behavioral data.
+- SVR and KNN models exhibited higher prediction errors and had more bias towards the central bins, underperforming compared to Random Forest.
 
 ## 8. Conclusion 
 
-Overall, the findings of this project strongly support the initial hypothesis: My Instagram screen time increases during bad weather conditions. The consistency across statistical tests, regression models, and machine learning predictions strengthens the reliability of this conclusion.
+Overall, the findings support the initial hypothesis: Instagram screen time tends to increase on bad weather days. Environmental factors such as temperature and weather conditions can be used to predict screen time to some extent, although the predictions are affected by considerable variability and noise. The consistency across statistical tests, regression analysis, and machine learning models strengthens the reliability of this conclusion.
 
 This analysis demonstrates how external environmental factors, specifically weather, can influence digital behavior. By understanding these patterns, individuals may be better equipped to manage their screen time more consciously. The project also shows the value of personal data tracking and simple predictive modeling in generating meaningful behavioral insights.
-
-
-
-
 
