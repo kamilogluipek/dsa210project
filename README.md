@@ -115,7 +115,7 @@ This scatter plot displays how closely the model’s predictions match the actua
 ### Confusion Matrix (RF)
 ![Image](https://github.com/user-attachments/assets/00a31339-722d-4eff-8016-8404fb967fe6)
 
-The confusion matrix below demonstrates how well the Random Forest model classifies daily screen time into pre-defined bins. Most predictions are close to the diagonal, indicating the model often predicts the correct or neighboring usage range.
+The confusion matrix above demonstrates how well the Random Forest model classifies daily screen time into pre-defined bins. Most predictions are close to the diagonal, indicating the model often predicts the correct or neighboring usage range.
 
 ### 5.2 K-Nearest Neighbors (KNN) Regressor
 * MAE (Mean Absolute Error): 34.74 minutes 
